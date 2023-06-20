@@ -5,7 +5,6 @@ export class Menu {
   image: string;
   description: string;
   restname: string;
-  username:any;
 
   constructor() {
     // this.id = 0;

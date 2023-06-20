@@ -1,0 +1,93 @@
+<!-- admin.component.html
+<div class="container">
+    <h1>Admin Dashboard</h1>
+    <div class="dashboard-buttons">
+      <a routerLink="/add-restaurant" class="dashboard-button">
+        <span class="dashboard-button-icon">&#43;</span>
+        <span>Add Restaurant</span>
+      </a>
+      <a routerLink="/add-menu" class="dashboard-button">
+        <span class="dashboard-button-icon">&#43;</span>
+        <span>Add Menu</span>
+      </a>
+      <a routerLink="/view-restaurants" class="dashboard-button">
+        <span class="dashboard-button-icon">&#128065;</span>
+        <span>View Restaurants</span>
+      </a>
+      <a routerLink="/view-menus" class="dashboard-button">
+        <span class="dashboard-button-icon">&#127839;</span>
+        <span>View Menus</span>
+      </a>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+   -->
+
+   <!-- admin.component.html -->
+<!-- <div class="container">
+    <h1>Admin Dashboard</h1>
+    <div class="dashboard-buttons">
+      <a (click)="showAddRestaurant = true" [class.active]="showAddRestaurant" class="dashboard-button">
+        <span class="dashboard-button-icon">&#43;</span>
+        <span>Add Restaurant</span>
+      </a>
+      <a (click)="showAddMenu = true" [class.active]="showAddMenu" class="dashboard-button">
+        <span class="dashboard-button-icon">&#43;</span>
+        <span>Add Menu</span>
+      </a>
+      <a (click)="showViewRestaurants = true" [class.active]="showViewRestaurants" class="dashboard-button">
+        <span class="dashboard-button-icon">&#128065;</span>
+        <span>View Restaurants</span>
+      </a>
+      <a (click)="showViewMenus = true" [class.active]="showViewMenus" class="dashboard-button">
+        <span class="dashboard-button-icon">&#127839;</span>
+        <span>View Menus</span>
+      </a>
+    </div>
+  
+    <div *ngIf="showAddRestaurant">
+      <app-add-restaurant></app-add-restaurant>
+    </div>
+    <div *ngIf="showAddMenu">
+      <app-add-menu></app-add-menu>
+    </div>
+    <div *ngIf="showViewRestaurants">
+      <app-view-restaurants></app-view-restaurants>
+    </div>
+    <div *ngIf="showViewMenus">
+      <app-view-menus></app-view-menus>
+    </div>
+  </div>
+   -->
+
+   <!-- admin.component.html -->
+<app-admin-header></app-admin-header>
+<div class="container">
+    <h1>Admin Dashboard</h1>
+    <div class="dashboard-buttons">
+      <a (click)="activeComponent = 'add-restaurant'" [class.active]="activeComponent === 'add-restaurant'" class="dashboard-button">
+        <span class="dashboard-button-icon">&#43;</span>
+        <span>Add Restaurant</span>
+      </a>
+      <a (click)="activeComponent = 'add-menu'" [class.active]="activeComponent === 'add-menu'" class="dashboard-button">
+        <span class="dashboard-button-icon">&#43;</span>
+        <span>Add Menu</span>
+      </a>
+      <a (click)="activeComponent = 'view-restaurants'" [class.active]="activeComponent === 'view-restaurants'" class="dashboard-button">
+        <span class="dashboard-button-icon">&#128065;</span>
+        <span>View Details</span>
+      </a>
+      <!-- <a (click)="activeComponent = 'view-menus'" [class.active]="activeComponent === 'view-menus'" class="dashboard-button">
+        <span class="dashboard-button-icon">&#127839;</span>
+        <span>View Menus</span>
+      </a> -->
+    </div>
+  
+    <div [ngSwitch]="activeComponent">
+      <app-add-restaurant *ngSwitchCase="'add-restaurant'"></app-add-restaurant>
+      <app-add-menu *ngSwitchCase="'add-menu'"></app-add-menu>
+      <app-view-restaurants *ngSwitchCase="'view-restaurants'"></app-view-restaurants>
+      <!-- <app-view-menus *ngSwitchCase="'view-menus'"></app-view-menus> -->
+    </div>
+  </div>
+  <app-admin-footer></app-admin-footer>

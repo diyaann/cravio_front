@@ -3,52 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { AdminComponent } from './admin/admin.component';
+import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
+import { AddMenuComponent } from './add-menu/add-menu.component';
+import { ViewMenusComponent } from './view-menus/view-menus.component';
+import { ViewRestaurantsComponent } from './view-restaurants/view-restaurants.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AboutComponent } from './about/about.component';
-import { AddMenuComponent } from './admin/add-menu/add-menu.component';
-import { AddRestaurantComponent } from './admin/add-restaurant/add-restaurant.component';
-import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
-import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
-import { AdminRegisterComponent } from './admin/admin-register/admin-register.component';
-import { UpdateMenuComponent } from './admin/update-menu/update-menu.component';
-import { ViewMenusComponent } from './admin/view-menus/view-menus.component';
-import { ViewRestaurantsComponent } from './admin/view-restaurants/view-restaurants.component';
-import { FooterComponent } from './footer/footer.component';
-import { CustomerHomeComponent } from './customer/customer-home/customer-home.component';
-import { CustomerLoginComponent } from './customer/customer-login/customer-login.component';
-import { CustomerRegisterComponent } from './customer/customer-register/customer-register.component';
-import { CustomerProfileComponent } from './customer/customer-profile/customer-profile.component';
-import { ListRestaurantComponent } from './customer/list-restaurant/list-restaurant.component';
-import { ListMenuComponent } from './customer/list-menu/list-menu.component';
-import { CustomerCartComponent } from './customer/customer-cart/customer-cart.component';
-
-
+import { UpdateMenuComponent } from './update-menu/update-menu.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
+import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    HomePageComponent,
-    AdminRegisterComponent,
-    AdminLoginComponent,
-    AdminHomeComponent,
-    AboutComponent,
-    FooterComponent,
-    AddMenuComponent,
+    AdminComponent,
     AddRestaurantComponent,
-    ViewRestaurantsComponent,
+    AddMenuComponent,
     ViewMenusComponent,
+    ViewRestaurantsComponent,
     UpdateMenuComponent,
-    CustomerHomeComponent,
-    CustomerLoginComponent,
-    CustomerRegisterComponent,
-    CustomerProfileComponent,
-    ListRestaurantComponent,
-    ListMenuComponent,
-    CustomerCartComponent
+    AdminHeaderComponent,
+    AdminFooterComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +32,6 @@ import { CustomerCartComponent } from './customer/customer-cart/customer-cart.co
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

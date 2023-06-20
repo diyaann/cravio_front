@@ -48,18 +48,5 @@ export class ConnectionService {
   getRestaurantNames() :Observable<Array<String>>{
     return this.http.get<Array<String>>(`http://localhost:8081/allproducts/getRestName`);
   }
-
-
-  /*Customer Add To Cart*/
-  addItemToCart(Menu: Menu):Observable<Menu>{
-    console.log(Menu.product);
-    console.log(Menu.restname);
-
-    return this.http.post<Menu>(`http://localhost:8090/api/v1/cart/addCart`,Menu)
-  }
-
-  getCart(username: any):Observable<Array<Menu>>{
-      return this.http.get<Array<Menu>>(`http://localhost:8081/favourites/viewFav/${username}`);
-  }
   
 }
