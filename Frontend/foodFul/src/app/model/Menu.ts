@@ -1,10 +1,11 @@
 export class Menu {
-  // id: number;
+  id: number;
   product: string;
   price: number;
   image: string;
   description: string;
   restname: string;
+  username:any;
 
   constructor() {
     // this.id = 0;

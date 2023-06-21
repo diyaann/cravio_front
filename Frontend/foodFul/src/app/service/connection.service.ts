@@ -48,5 +48,8 @@ export class ConnectionService {
   getRestaurantNames() :Observable<Array<String>>{
     return this.http.get<Array<String>>(`http://localhost:8081/allproducts/getRestName`);
   }
+
+
+
   
 }
